@@ -4,7 +4,7 @@
   <head>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- remove this line, and page would be unreadable -->
     <title>Slap duels</title>
     <style>
       body {
@@ -15,6 +15,16 @@
         align-items: center;
         background-color: #121212;
         flex-direction: column;
+        font-family: "Comic Sans MS" , cursive;
+        /*i frking love Comic Sans bro*/
+      }
+
+      .main-title {
+        color: #ffffff;
+        font-size: 2.3rem;
+        margin-top: 2px;
+        text-shadow: 0 0 5px #ffffff;
+        font-weight: bolder;
         font-family: "Comic Sans MS" , cursive;
       }
 
@@ -33,10 +43,10 @@
 
       .subtitle {
         color: #ffffff;
-        font-size: 1.5rem;
-        margin-top: 2px; /* Відстань від заголовка */
+        font-size: 2rem;
+        margin-top: 0;
         text-shadow: 0 0 5px #ffffff;
-        font-weight: 300;
+        font-weight: lighter;
       }
 
       .text-blue {
@@ -52,6 +62,22 @@
       .text-default {
         color: #ffffff;
         text-shadow: 0 0 5px #000000, 0 0 10px #ffffff;
+      }
+
+      input {
+        padding: 0;
+        position: sticky ;
+        font-size: 2rem;
+        color: white;
+        margin: 15px;
+        background: transparent;
+        border: 3px solid #ff3e3e;
+        text-decoration: none;
+        transition: 0.3s;
+        text-shadow: 0 0 5px #ff3e3e;
+        box-shadow: 0 0 10px #ff3e3e;
+        font-family: 'Comic Sans MS', cursive;
+        resize: none;
       }
 
       button {
@@ -80,16 +106,16 @@
 
   <body>
     <div class="header-corner">
-      <h1 class="main-title">
+      <h1 class="main-title"> <b>
         <span class="text-default">WELCOME TO</span>
         <span class="text-blue">SLAP</span>
         <span class="text-red">DUELS</span>
-      </h1>
+      </b> </h1>
       <p class="subtitle">Time to slap somebody rlly harD!</p>
     </div>
 
     <div class="corner-credits-text">
-      <p class="subtitle">Made by nich0</p>
+      <p class="subtitle">Made by nich0</p>  <!--me 😲😲😲-->
       <p class="subtitle">Solo dev who just learned .html and .css</p>
     </div>
 
@@ -97,6 +123,9 @@
       <button id="play-button">PLAY</button>
       <button id="settings-button">Settings</button>
     </div>
-    <script src="js/GameManager.js"></script>
+
+    <input id="name-input" type="text" placeholder="Enter your nickname" minlength="3" maxlength="15" required>
+    <script src="js/MenuManager.js"></script>
+<!--     script is at the end for it to initialize last, so all ui elements would be available-->
   </body>
 </html>
