@@ -1,0 +1,102 @@
+<!Doctype html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Slap duels</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #121212;
+        flex-direction: column;
+        font-family: "Comic Sans MS" , cursive;
+      }
+
+      .header-corner {
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+
+      .corner-credits-text {
+        direction: rtl;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+      }
+
+      .subtitle {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-top: 2px; /* Відстань від заголовка */
+        text-shadow: 0 0 5px #ffffff;
+        font-weight: 300;
+      }
+
+      .text-blue {
+        color: #8fe3ff;
+        text-shadow: 0 0 5px #000000, 0 0 10px #ffffff;
+      }
+
+      .text-red {
+        color: #ff968f;
+        text-shadow: 0 0 5px #000000, 0 0 10px #ffffff;
+      }
+
+      .text-default {
+        color: #ffffff;
+        text-shadow: 0 0 5px #000000, 0 0 10px #ffffff;
+      }
+
+      button {
+        padding: 20px 60px;
+        position: sticky ;
+        font-size: 2rem;
+        color: white;
+        margin: 15px;
+        background: transparent;
+        border: 3px solid #ff3e3e;
+        text-decoration: none;
+        transition: 0.3s;
+        text-shadow: 0 0 5px #ff3e3e;
+        box-shadow: 0 0 10px #ff3e3e;
+        font-family: 'Comic Sans MS', cursive;
+      }
+
+      button:hover {
+        background: #ff3e3e;
+        box-shadow: 0 0 30px #ff3e3e;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header-corner">
+      <h1 class="main-title">
+        <span class="text-default">WELCOME TO</span>
+        <span class="text-blue">SLAP</span>
+        <span class="text-red">DUELS</span>
+      </h1>
+      <p class="subtitle">Time to slap somebody rlly harD!</p>
+    </div>
+
+    <div class="corner-credits-text">
+      <p class="subtitle">Made by nich0</p>
+      <p class="subtitle">Solo dev who just learned .html and .css</p>
+    </div>
+
+    <div class="center-content">
+      <button id="play-button">PLAY</button>
+      <button id="settings-button">Settings</button>
+    </div>
+    <script src="js/GameManager.js"></script>
+  </body>
+</html>
